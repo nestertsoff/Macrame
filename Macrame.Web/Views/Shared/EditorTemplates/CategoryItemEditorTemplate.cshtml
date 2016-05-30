@@ -1,0 +1,22 @@
+﻿@model Macrame.Domain.Entities.Concrete.Items.Additional.CategoryItem
+
+<div>
+    <div class="form-group col-sm-8 pull-right">
+        <div class="panel panel-default  pull-right">
+            <div class="panel-body">
+                <div class="form-group col-sm-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="fa fa-tags category-add-btn"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.Categories, new { @class = "form-control category-control", type = "text", placeholder = nameof(Model.Categories) })
+                        <span class="input-group-addon category-add-btn">
+                            <i class="fa fa-plus category-add-btn"></i>
+                        </span>
+                        @Html.ValidationMessageFor(model => model.Categories, string.Empty, new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@model Macrame.Domain.Entities.Concrete.Items.DateTime.DateTimeItem
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Layouts/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr/>
+        @Html.ValidationSummary(true, string.Empty, new { @class = "text-danger" })
+
+        @(Html.EditorForModel("DateTimeItemEditorTemplate"))
+        @(Html.EditorForModel("DateTimeItemEditorTemplate"))
+        @(Html.EditorForModel("DateTimeItemEditorTemplate"))
+        @(Html.EditorForModel("DateTimeItemEditorTemplate"))
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Frontend/js/jquery-1.12.4.min.js"></script>
+<script src="~/Frontend/js/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Frontend/js/bootstrap.min.js"></script>
+<script src="~/Frontend/js/bootstrap-datepicker.js"></script>
+<script src="~/Frontend/js/material.min.js"></script>
+<script src="~/Frontend/js/material-kit.js"></script>
+<script src="~/Frontend/js/nouislider.min.js"></script>
